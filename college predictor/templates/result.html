@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Prediction Result</title>
+</head>
+<body>
+    <h1>College Prediction Result</h1>
+    <p>Predicted College Name: {{ predicted_college_name }}</p>
+    <p>Recommended Colleges in the Same Cluster:</p>
+    <ul>
+        {% for college in recommended_colleges %}
+            <li>{{ college }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 70px 100px;
+            padding: 0;
+            background-color: #fdfbec;
+        }
+        h1 ,h2{
+            text-align: center;
+            color: #333;
+            
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li ,p {
+            margin-bottom: 7px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 16px;
+            font-weight:600;
+            box-shadow: 0 2px 5px rgb(60 54 54 / 55%)
+        }
+    </style>
+</head>
+<body>
+    <h1>College Prediction Results</h1>
+    <p>Predicted College : {{ predicted_college_name }}</p>
+    <h2>Recommended Colleges you can opt for</h2>
+    <ul>
+        {% for college in recommended_colleges %}
+            <li>{{ college }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

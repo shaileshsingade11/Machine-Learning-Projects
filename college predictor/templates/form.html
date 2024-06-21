@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            /* Add a background color for contrast */
+        }
+
+        .inner {
+            display: flex;
+            width: 70%;
+            box-shadow: 10px 10px 68px -6px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo {
+            width: 50%;
+            padding: 0%;
+            height: 628px;
+            border-radius: 100px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 98%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .userform {
+            background-color: rgb(179, 203, 229);
+            padding: 20px;
+            width: 50%;
+            border-radius: 0 20px 20px 0;
+            /* Adjust the border-radius for the form */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .userform h1 {
+            color: #fff;
+            margin-top: 0px;
+            /* Adjust margin for spacing */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inner">
+        <div class="photo">
+            <!-- <img src="../images/website_image.jpeg" alt="ig/interface.jpg"> -->
+        <!-- <img src="{{ url_for('static', filename='website_image.jpeg') }}" alt="feedback Image" class="photo">    </div>  -->
+        <img src="https://www.gnipst-slc.ac.in/images/feature/01.jpg" alt="External Image">
+
+        </div>
+        <div class="userform">
+            <h1>Welcome</h1>
+            <form method="POST" action="/form" class="form-container">
+                <!-- Your form elements here -->
+
+                <select name="round_no" id="round_no">
+                    <option value="">Round number</option>
+                    <option value="1">round 1</option>
+                    <option value="2">round 2</option>
+                </select><br>
+
+                <select id="branch" name="branch" required>
+                    <option value="">Select a Branch</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Computer Technology">Computer Technology</option>
+                    <option value="Computer Science and Design">Computer Science and Design</option>
+                    <option value="Electrical Engg[Electronics and Power]">Electrical Engineering (Electronics and Power)</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Electronics and Telecommunication Engineering">Electronics and Telecommunication Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Computer Science and Engineering(Data Science)">Computer Science and Engineering(Data Science)</option>
+                    <option value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
+                    <option value="Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+                    <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+                    <option value="BioTechnology">BioTechnology</option>
+                    <option value="Surface Coating Technology">Surface Coating Technology</option>
+                    <option value="Food Technology">Food Technology</option>
+                    <option value="Chemical Engineering">Chemical Engineering</option>
+                    <option value="Plastic and Polymer Technology">Plastic and Polymer Technology</option>
+                    <option value="Paper and Pulp Technology">Paper and Pulp Technology</option>
+                    <option value="Petro Chemical Techniology">Petro Chemical Techniology</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Oil Technology">Oil Technology</option>
+                    <option value="Industrial IoT">Industrial IoT</option>
+                    <option value="Robotics and Artificial Intelligence">Robotics and Artificial Intelligence</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="Computer Science and Business Systems">Computer Science and Business Systems</option>
+                    <option value="Bio Medical Engineering">Bio Medical Engineering</option>
+                    <option value="Electronics and Computer Science">Electronics and Computer Science</option>
+                    <option value="Safety and Fire Engineering">Safety and Fire Engineering</option>
+                    <option value="Instrumentation Engineering">Instrumentation Engineering</option>
+                    <option value="Production Engineering">Production Engineering</option>
+                    <option value="Textile Technology">Textile Technology</option>
+                    <option value="Automation and Robotics">Automation and Robotics</option>
+                    <option value="Automobile Engineering">Automobile Engineering</option>
+                    <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                    <option value="Internet of Things">Internet of Things</option>
+                    <option value="Pharmaceutical and Fine Chemical Technology">Pharmaceutical and Fine Chemical Technology</option>
+                    <option value="Mining Engineering">Mining Engineering</option>
+                    <option value="Electroncs Engineering">Electroncs Engineering</option>
+                    <option value="Oils Fats and Waxes Technology">Oils Fats and Waxes Technology</option>
+                    <option value="Paints Technology">Paints Technology</option>
+                    <option value="Agricultural Engineering">Agricultural Engineering</option>
+                    <option value="Mechanical & Automation Engineering">Mechanical & Automation Engineering</option>
+                    <option value="Civil and Environmental Engineering">Civil and Environmental Engineering</option>
+                    <option value="Product Engineering (Sandwich)">Product Engineering (Sandwich)</option>
+                    <option value="Dyestuff Technology">Dyestuff Technology</option>
+                    <option value="Oil, Oleochemicals and Surfactants Technology">Oil, Oleochemicals and Surfactants Technology</option>
+                    <option value="Pharmaceuticals Chemistry and Technology">Pharmaceuticals Chemistry and Technology</option>
+                    <option value="Fibres and Textile Processing Technology">Fibres and Textile Processing Technology</option>
+                    <option value="Polymer Engineering and Technology">Polymer Engineering and Technology</option>
+                    <option value="Mechanical and Mechatronics Engineering (Additive Manufacturing)">Mechanical and Mechatronics Engineering</option>
+                    <option value="Civil and Infrastructure Engineering">Civil and Infrastructure Engineering</option>
+                    <option value="Textile Engineering / Technology">Textile Engineering / Technology</option>
+                    <option value="Food Technology and Management">Food Technology and Management</option>           
+                </select><br>
+
+                <select name="quota" id="quota" required>
+                    <option value="">Quota</option>
+                    <option value="Home">Home University</option>
+                    <option value="Other">Other University</option>
+                </select><br>
+              
+                <select name="category" id="category">
+                    <OPTIOn value="">enter your category</OPTIOn>
+                    <option value="OPEN">OPEN</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                    <option value="LOPEN">LOPEN</option>
+                    <option value="LOBC">LOBC</option>
+                    <option value="NT1">NT1</option>
+                    <option value="NT2">NT2</option>
+                </select><br>
+
+                <input name="closing_cut_off" type="number" id="closing_cut_off" placeholder="Enter your CET %tile" min="0" max="100"
+                    oninput="validateCET(this)" required><br>
+
+                <script>
+                    function validateCET(input) {
+                        if (input.value.includes('.') && input.value.split('.')[1].length > 1) {
+                            input.value = input.value.slice(0, input.value.indexOf('.') + 2);
+                        }
+                    }
+                </script>
+
+
+                <select id="location" name="location" required>
+                    <option value="">select desired location</option>
+                    <option value="Akola">Akola</option>
+                    <option value="Amravati">Amravati</option>
+                    <option value="Aurangabad">Aurangabad</option>
+                    <option value="Beed">Beed</option>
+                    <option value="Bhandara">Bhandara</option>
+                    <option value="Buldhana">Buldhana</option>
+                    <option value="chandrapur">chandrapur</option>
+                    <option value="Dhule">Dhule</option>
+                    <option value="Hingoli">Hingoli</option>
+                    <option value="Jalgaon">Jalgaon</option>
+                    <option value="Jalna">Jalna</option>
+                    <option value="Kolhapur">Kolhapur</option>
+                    <option value="Latur">Latur</option>
+                    <option value="Mumbai">Mumbai </option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nanded">Nanded</option>
+                    <option value="Nandurbar">Nandurbar</option>
+                    <option value="Nashik">Nashik</option>
+                    <option value="osmanabad">osmanabad</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Raigad">Raigad</option>
+                    <option value="Ratnagiri">Ratnagiri</option>
+                    <option value="sangli">sangli</option>
+                    <option value="satara">satara</option>
+                    <option value="Solapur">Solapur</option>
+                    <option value="Thane">Thane</option>
+                    <option value="Wardha">Wardha</option>
+                    <option value="washim">washim</option>
+                    <option value="yavatmal">Yavatmal</option>
+                </select><br>
+
+                
+                <button id="btn" type="submit">check for colleges</button>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

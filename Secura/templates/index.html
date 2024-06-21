@@ -1,0 +1,97 @@
+<html><head>ng
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secura</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+    
+</head>
+<body>
+    
+    <nav id="navbar">
+    <div id="logo">
+        <img src="{{url_for('static', filename='Secura.png')}}" alt="TCR logo">
+    </div>   
+    
+    <ul>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="https://drive.google.com/file/d/12EIM3Q5b26MFxv7AGw2_8JUpfLuxGLS3/view?usp=sharing">Data Base</a></li>
+        
+        <li class="item"><a href="#registration">Registration</a></li>
+    </ul>
+    </nav>
+    <section id="home" style="background-image: url('{{url_for('static', filename='fewd.jpg')}}'); 
+    background-size: cover; height:480px; padding-top:80px;" >
+        <h1 id="h-primary">WELCOME TO SECURA</h1>
+        
+        <button class="btn"><a href="#registration">Register Now</a></button>
+    </section>
+    <section style="margin:0px 50px 10px 150px;" class="Courses-container">
+
+        <h1 class="h-primary center">Security Video</h1>
+        <p style="text-align:center;">
+            <img id="bg" class="h-primary center" src="{{ url_for('video_feed') }}">
+        </p>
+        <p style="text-align:center;">
+            <form action="/copy" method="POST" enctype="multipart/form-data">
+                <button style="width: 232px;margin-top: 20px;font-size: 20px;" type="submit" class="btn btn-dark">COPY
+                </button>
+            </form>
+        </p>
+
+    </section>
+    
+    <section style="margin:0px 50px 10px 150px;" class="center">
+        <h1 class="h-primary center">Security Offered</h1>
+        <p style="text-align:center;">
+            <div style="text-align:center" id="courses">
+                <div class="box center">
+                <img class="h-primary center" src="{{url_for('static', filename='Anonymous.jpg')}}" alt="">
+                <h2 class="h-secondary center">Anonymous Detection</h2>
+                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum et adipisci corporis totam commodi maiores asperiores ipsam, delectus sapiente nam tenetur rem placeat voluptatibus obcaecati deleniti, laudantium ullam, repellat consectetur.</p>
+            </div>
+            <div style="text-align:center" class="box">
+                <img src="{{url_for('static', filename='Face Regognition.jpg')}}" alt="">
+                <h2 class="h-secondary center">Face Regognition </h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum et adipisci corporis totam commodi maiores asperiores ipsam, delectus sapiente nam tenetur rem placeat voluptatibus obcaecati deleniti, laudantium ullam, repellat consectetur.</p>
+            </div>
+            <div style="text-align:center" class="box">
+                <img src="{{url_for('static', filename='tracking person.jpg')}}" alt="">
+                <h2 class="h-secondary center">Tracking Person</h2>
+                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum et adipisci corporis totam commodi maiores asperiores ipsam, delectus sapiente nam tenetur rem placeat voluptatibus obcaecati deleniti, laudantium ullam, repellat consectetur.</p>
+            </div>
+        </p>
+    </section>
+
+    <h1 style="text-align:center" >Anonymous Person Data Registration</h1>
+        <fieldset style="text-align:center" id="registration">
+
+
+                <div class="col" style="border-radius: 20px;padding: 0px;background-color:rgb(211,211,211,0.5);margin:0px 450px 0px 450px;height: 400px;">
+                    <form action="/add" method="POST" enctype="multipart/form-data">
+                        <h2 style="border-radius: 20px 20px 0px 0px;background-color: #0b4c61;color: white;padding: 10px;">Add
+                            New User <i class="material-icons"></i></h2>
+                        <label style="font-size: 20px;"><b>Enter New User Name*</b></label>
+                        <br>
+                        <input type="text" id="newusername" name="newusername" style="font-size: 20px;margin-top:10px;margin-bottom:10px;" required="">
+                        <br>
+                        <label style="font-size: 20px;"><b>Enter New User Id*</b></label>
+                        <br>
+                        <input type="number" id="newusereid" name="newuserid" style="font-size: 20px;margin-top:10px;margin-bottom:10px;" required="">
+                        <br>
+                        <button style="width: 232px;margin-top: 20px;font-size: 20px;" type="submit" class="btn btn-dark">Add
+                            New User
+                        </button>
+                        <br>
+                        <h5 style="padding: 25px;"><i>Total Users in Database: {{totalreg}}</i></h5>
+                    </form>
+                </div>
+        </fieldset>
+
+    <footer>
+        <img src="{{url_for('static', filename='Secura.png')}}" alt="Footer Logo" height="30px">
+        <span><br>Copyright © 2023 </span>
+    </footer>
+
+</body></html>

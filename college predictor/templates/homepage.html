@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+
+<body>
+
+    <!-- {% extends 'app.html' %}
+    {% block content %} -->
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">EngiWave</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+
+                    <li>
+                        <H3><a href="{{ url_for('login') }}">Login</a></H3>
+                    </li>
+
+                    <li>
+                        <H3><a href="{{ url_for('register') }}">Signup</a></H3>
+                    </li>
+            
+                    <li>
+                        <H3><a href="{{ url_for('explore_branches') }}">ExploreBranches</a></H3>
+                
+                    </li>
+                    <li>
+                        <H3><a href="{{ url_for('about') }}">About Us </a></H3>
+                    <!-- </li>
+                    <li>
+                        <H3><a href="{{ url_for('feedback') }}">Feedback</a></H3>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Exploring <br><span>Engineering</span> <br>Career Paths</h1>
+            <p class="par"> Welcome to our career counseling section for engineering students<br> choosing right carrer
+                path in engineering is a crucial decision, and we're here to provide you
+                <br> with valuable insight and guidance to help you make informed choices about your future
+            </p>
+
+            <button class="cn"><a href="{{url_for('form')}}">Let's Begin</a></button>
+
+           
+        </div>
+        <!-- <img src="{{ url_for('static', filename='projectImage1.jpg') }}" alt="Project Image" class="project-image">    </div> -->
+       <img class="project-image"   src="https://intersoftin.com/wp-content/uploads/2023/03/Banner-1.png" alt="">
+    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
+
+   
+
+<!-- {% endblock %} -->
+</body>
+
+
+
+</html>
+
+
+
